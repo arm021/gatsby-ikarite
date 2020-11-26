@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ac64db9e33e43e694530.js"
+    "url": "webpack-runtime-35a37f5ab15d6ecfae3c.js"
   },
   {
     "url": "framework-e999cc17a4b21332c0dd.js"
   },
   {
-    "url": "app-0d7fe358a1901f8e7d91.js"
+    "url": "app-ddb6d7d0a79626569c6d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c8d3112368c2b91c0c6434d252cfa333"
+    "revision": "6cc3ba1122c7583209c36dc1628532c1"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-6bbe396b6acf2fa4750b.js"
@@ -48,14 +48,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "431ddbbbddd1675c8d2ceae0a2180b2b"
+    "revision": "4cfa65ce061e5b9309c59a8908e49d38"
   },
   {
     "url": "polyfill-e970c247bbc0d7ca8f7f.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "808940b1a878063c5e8e7c948c7ecc93"
+    "revision": "2843c4df4aa642247842e4047a713d0f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -142,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/gatsby-ikarite`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-0d7fe358a1901f8e7d91.js`))) {
+  if (!resources || !(await caches.match(`/gatsby-ikarite/app-ddb6d7d0a79626569c6d.js`))) {
     return await fetch(event.request)
   }
 
@@ -160,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/gatsby-ikarite/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
