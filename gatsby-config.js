@@ -75,48 +75,85 @@ module.exports = {
           type: 'carousel',
           children: [
             {
-              name: 'Jewelery',
-              type: 'collection',
-              handle: 'jewelery',
+              name: 'Slide 1',
+              type: 'slide',
+              handle: 'slide 1',
+              link: '/collection/face',
               textColor: 'black',
               textBgColor: 'white',
+              header: 'Discover Our Universe!',
+              subheader: 'Our beauty treatments enriched with our signature ingredient, the Shea Butter, will become your daily essentials.',
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/group-2_300x300.png',
+              bg: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/bg-face.jpg',
             },
             {
-              name: 'Apparel',
-              type: 'collection',
-              handle: 'apparel',
+              name: 'Slide 2',
+              type: 'slide',
+              handle: 'slide 2',
+              link: '/collection/body',
               textColor: 'white',
               textBgColor: 'primary',
-            },
-            {
-              name: 'Silk Summer Top',
-              type: 'product',
-              handle: 'silk-summer-top',
-              textColor: 'white',
-              textBgColor: 'primary',
+              header: 'Discover Our Universe!',
+              subheader: 'Our beauty treatments enriched with our signature ingredient, the Shea Butter, will become your daily essentials.',
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/group-2_300x300.png',
+              bg: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/bg-face.jpg',
             },
           ],
         },
         {
-          name: 'Face',
-          type: 'collection',
-          handle: 'face',
-          textColor: 'text',
-          textBgColor: 'white',
+          name: 'header',
+          type: 'header',
+          header: 'Welcome to the French Beauty Universe by Institut Karité Paris',
+          subheader: 'Discover all our beauty products made with natural Shea Butter',
         },
         {
-          name: 'Body',
           type: 'collection',
-          handle: 'body',
-          textColor: 'text',
-          textBgColor: 'white',
+          children: [
+            {
+              name: 'Face',
+              type: 'collection',
+              handle: 'face',
+              textColor: 'text',
+              textBgColor: 'white',
+              bgColor: '#e8f0f9',
+            },
+            {
+              name: 'Body',
+              type: 'collection',
+              handle: 'body',
+              textColor: 'text',
+              textBgColor: 'white',
+              bgColor: '#ffebf0',
+            },
+            {
+              name: 'Hair',
+              type: 'collection',
+              handle: 'hair',
+              textColor: 'text',
+              textBgColor: 'white',
+              bgColor: '#e7faf1',
+            },
+          ],
         },
         {
-          name: 'Hair',
-          type: 'collection',
-          handle: 'hair',
-          textColor: 'text',
-          textBgColor: 'white',
+          type: 'tabs',
+          children: [
+            {
+              name: 'Face',
+              type: 'collection',
+              handle: 'face',
+            },
+            {
+              name: 'Body',
+              type: 'collection',
+              handle: 'body',
+            },
+            {
+              name: 'Hair',
+              type: 'collection',
+              handle: 'hair',
+            },
+          ],
         },
         {
           name: 'Shea Shaving Soap 100 g Milk Cream',
@@ -145,6 +182,92 @@ module.exports = {
           handle: 'shea-day-lotion-normal-to-combination-skin-50-ml-milk-cream',
           textColor: 'text',
           textBgColor: 'white',
+        },
+        {
+          name: 'banner',
+          type: 'banner',
+          src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/group-3.jpg',
+          logo: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/logo-hipanema.png',
+          header: 'Two Free Hipanema Bracelets',
+          subheader: 'Get a set of bracelets with any purchase in August*',
+          note: '*Within stocks limits',
+          link: '/collection/face',
+        },
+        {
+          name: 'text-with-image',
+          type: 'textImage',
+          src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/jungle-flowers-small-pouch-body-milk-cream_large.jpg',
+          header: 'The art of gifting',
+          subheader: "Can't find that perfect gift? Don't panic! Let us help you find the gift that will please for sure. We have prepared a selection of sets, limited editions, exclusive boxes, and so many other surprises for you. You know what you've to do... Just go shopping.",
+          link: '/collection/gift-sets',
+        },
+        {
+          type: 'blog',
+          children: [
+            {
+              name: 'DIY #1 : Shea Butter Gentle Scrub',
+              type: 'article',
+              handle: 'diy-1-shea-butter-gentle-scrub',
+              textColor: 'text',
+              textBgColor: 'transparent',
+            },
+            {
+              name: 'An Olfactory Journey to the French Riviera',
+              type: 'article',
+              handle: 'an-olfactory-journey-to-the-french-riviera',
+              textColor: 'text',
+              textBgColor: 'transparent',
+            },
+          ],
+        },
+        {
+          type: 'siteDesc',
+          bgColor: '#e7faf1',
+          children: [
+            { 
+              name: 'desc-icon-1',
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/5-ce-5-fd-40-e-6-ea-5_300x300.png',
+              header: 'Free shipping',
+              subheader: 'Free US shipping with Delivengo on $100+ orders',
+            },
+            {
+              name: 'desc-icon-2',
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/5-ce-5-fe-09-f-312-f_300x300.png',
+              header: 'Contact us',
+              subheader: 'We are available to answer your questions as quickly as possible. Please write us at contact@ikparis.com',
+            },
+            {
+              name: 'desc-icon-3',
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/5-ce-5-fe-1-f-7-bfc-6_300x300.png',
+              header: 'Return policy',
+              subheader: 'If you are not satisfied with your purchase, you we accept return within 14 days of receipt of your purchase.',
+            },
+          ]
+        },
+        {
+          type: 'instagram',
+          children: [
+            { 
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/65090080-146859036388783-7905833371175479755-n_228x228@2x.jpg',
+              link: 'https://www.instagram.com/institutkarite/'
+            },
+            { 
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/66678555-385580088763213-8211713091109544756-n_228x228@2x.jpg',
+              link: 'https://www.instagram.com/institutkarite/'
+            },
+            { 
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/67061236-102865597659060-5222703128442344721-n_228x228@2x.jpg',
+              link: 'https://www.instagram.com/institutkarite/'
+            },
+            { 
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/66317111-2924242140980090-193635536206961006-n_228x228@2x.jpg',
+              link: 'https://www.instagram.com/institutkarite/'
+            },
+            { 
+              src: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/67548971-2311751482473833-5648329282294158340-n_228x228@2x.jpg',
+              link: 'https://www.instagram.com/institutkarite/'
+            },
+          ],
         },
       ],
       // Menu types: "header", "collection", "product", "link"
