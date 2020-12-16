@@ -202,7 +202,9 @@ module.exports = {
           link: '/collection/gift-sets',
         },
         {
+          name: 'blog',
           type: 'blog',
+          logo: 'https://cdn.shopify.com/s/files/1/0117/9005/7534/files/cropped-lejournal-1_160x160@2x.jpg',
           children: [
             {
               name: 'DIY #1 : Shea Butter Gentle Scrub',
