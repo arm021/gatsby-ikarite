@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c8f884740b594b6fa7ee.js"
+    "url": "webpack-runtime-cd1a07e2480674576f30.js"
   },
   {
     "url": "framework-e999cc17a4b21332c0dd.js"
   },
   {
-    "url": "app-3f7fa2d079947284efd0.js"
+    "url": "app-f6bf5f77ae59b0bd002b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "2279714abba37b3971e183a1ff5d0d7d"
+    "revision": "918cd294e73960941c15000c3dcac491"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-6bbe396b6acf2fa4750b.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "adc1f21f01376d9a0d729592fb594092"
+    "revision": "07b658cd442cfe72f61e2fe05197a025"
   },
   {
     "url": "polyfill-e970c247bbc0d7ca8f7f.js"
@@ -147,7 +147,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gatsby-ikarite/app-3f7fa2d079947284efd0.js`))) {
+  if (!resources || !(await caches.match(`/gatsby-ikarite/app-f6bf5f77ae59b0bd002b.js`))) {
     return await fetch(event.request)
   }
 
