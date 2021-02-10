@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[6],{mJ7t:function(_,n,t){"use strict";t.r(n);var e=t("q1tI"),r=t.n(e),u=t("VdAu");n.default=function(_){return r.a.createElement(u.g,{dangerouslySetInnerHTML:{__html:_.source}})}}}]);
+//# sourceMappingURL=DescriptionBox-6cea9a92015ad360aad6.js.map
